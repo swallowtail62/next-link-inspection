@@ -1,7 +1,8 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -18,9 +19,34 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
+
+        <section id="section1" className={styles.section}>
+          <h2>section 1</h2>
+          <p>section 1 paragraph...</p>
+        </section>
+
+        <section id="section2" className={styles.section}>
+          <h2>section 2</h2>
+          <p>section 2 paragraph...</p>
+        </section>
+
+        <section id="section3" className={styles.section}>
+          <h2>section 3</h2>
+          <p>section 3 paragraph...</p>
+        </section>
+
+        <section id="section4" className={styles.section}>
+          <h2>section 4</h2>
+          <p>section 4 paragraph...</p>
+        </section>
+
+        <section id="section5" className={styles.section}>
+          <h2>section 5</h2>
+          <p>section 5 paragraph...</p>
+        </section>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -59,14 +85,22 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
+        <nav className={styles.nav}>
+          <Link href="/">TOP</Link>
+          <Link href="#section1">section 1</Link>
+          <Link href="#section2">section 2</Link>
+          <Link href="#section3">section 3</Link>
+          <Link href="#section4">section 4</Link>
+          <Link href="#section5">section 5</Link>
+        </nav>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
